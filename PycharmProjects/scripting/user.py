@@ -1,10 +1,12 @@
 import time
 
+print("Welcome to the keepright error filter")
+workDir = input("insert the path where keepright_errors.txt can be found:")
+print(workDir)
+username = input("Enter the username ")
 timestr = time.strftime("%Y%m%d-%H%M%S")
-input_file = 'C:/keepright/keepright_errors.txt'
-#input_file = ('output.txt')
-output_file = ("results" +timestr+ ".txt")
-username = "istvanv_telenav"
+input_file = str(workDir) + '/keepright_errors.txt'
+output_file = str(workDir) + "/results" +timestr+ ".txt"
 
 with open(input_file, encoding="latin-1") as f, open(output_file, "w") as o:
     next(f, None)
